@@ -17,12 +17,13 @@ class BookController extends Controller
 
     public function create()
     {
-        //
+        return view('book.create');
     }
 
     public function store(Request $request)
     {
-        //
+        Book::create($request->all());
+        return redirect ('/book');
     }
     public function show(book $book)
     {

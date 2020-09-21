@@ -25,12 +25,12 @@ class BookController extends Controller
         Book::create($request->all());
         return redirect ('/book');
     }
-    public function show(book $book)
+    public function show(Book $book)
     {
         //
     }
 
-    public function edit(book $book)
+    public function edit(Book $book)
     {
         return view('book.edit', compact('book'));
     }
@@ -41,8 +41,9 @@ class BookController extends Controller
         return redirect('/book');
     }
 
-    public function destroy(book $book)
+    public function destroy(Book $book)
     {
-        //
+        $book->delete();
+        return redirect('/book');
     }
 }

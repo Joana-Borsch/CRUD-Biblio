@@ -19,6 +19,13 @@
                                 <td>{{$book->name}}</td>
                                 <td>{{$book->edition}}</td>
                                 <td><a href="{{Route('book.edit', $book->id)}}">Editar</a></td>
+                                <td>
+                                    <form action="{{Route('book.destroy', $book->id)}}" method="POST" >
+                                        @csrf
+                                        @method('delete')
+                                        <input type="submit" value="Eliminar">
+                                    </form>
+                                </td>
                                 @endforeach
                             </tr>
                         </tbody>

@@ -32,12 +32,13 @@ class BookController extends Controller
 
     public function edit(book $book)
     {
-        //
+        return view('book.edit', compact('book'));
     }
 
     public function update(Request $request, book $book)
     {
-        //
+        $book->update($request->all());
+        return redirect('/book');
     }
 
     public function destroy(book $book)

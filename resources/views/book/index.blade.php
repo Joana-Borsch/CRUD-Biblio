@@ -18,6 +18,7 @@
                             <tr>
                                 <td>{{$book->name}}</td>
                                 <td>{{$book->edition}}</td>
+                                <td><a href="{{Route('book.edit', $book->id)}}">Editar</a></td>
                                 @endforeach
                             </tr>
                         </tbody>

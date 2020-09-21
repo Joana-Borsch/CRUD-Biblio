@@ -7,26 +7,22 @@
                 LLIBRES <a href="{{Route('book.create')}}" class="btn btn-secondary">Nou</a>
             </div>
             <div class="card-body">
-                <form action="{{Route('book.store')}}" method="POST">
+                <form action="{{Route('book.update', $book->id)}}" method="POST">
                     @csrf
+                    @method('put')
                     <div class="form-group">
                         <label>Títol</label>
-                        <input type="text" name="name" class="form-control"/>
+                        <input type="text" name="name" class="form-control" value={{$book->name}}/>
                     </div>
                     <div class="form-group">
                         <label>Edició</label>
-                        <input type="text" name="edition" class="form-control"/>
+                        <input type="text" name="edition" class="form-control" value="{{$book->edition}}"/>
                     </div>
                     <div class="card-footer">
-                        <input type="submit" value="Crear" class="btn btn-primary">
+                        <input type="submit" value="Editar" class="btn btn-primary">
                     </div>
                 </form>
             </div>
-
-        </div>
-
-
-
         </div>
     </div>
 @endsection

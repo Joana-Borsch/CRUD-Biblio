@@ -12,7 +12,7 @@
                     @method('put')
                     <div class="form-group">
                         <label>Títol</label>
-                        <input type="text" name="name" class="form-control" value={{$book->name}}/>
+                        <input type="text" name="name" class="form-control" value="{{$book->name}}"/>
                     </div>
                     <div class="form-group">
                         <label>Edició</label>

@@ -33,16 +33,18 @@ class AuthorController extends Controller
 
     public function edit(Author $author)
     {
-        //
+        return view('author.edit', compact('author'));
     }
 
     public function update(Request $request, Author $author)
     {
-        //
+        $author->update($request->all());
+        return redirect('/author');
     }
 
     public function destroy(Author $author)
     {
-        //
+        $author->delete();
+        return redirect('/author');
     }
 }

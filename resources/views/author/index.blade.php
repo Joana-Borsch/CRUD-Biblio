@@ -4,25 +4,25 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-                LLIBRES <a href="{{Route('book.create')}}" class="btn btn-secondary">Nou</a>
+                LLIBRES <a href="{{Route('author.create')}}" class="btn btn-secondary">Nou</a>
                 <div class="card-body">
                     <table class="table justify-content">
                         <thead>
                         <tr>
-                            <th>Títol</th>
-                            <th>Autor</th>
-                            <th>Edició</th>
+                            <th>Nom</th>
+                            <th>Lloc de pertinença</th>
+                            <th>Biografia</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($books as $book)
+                        @foreach($authors as $author)
                             <tr>
-                                <td>{{$book->name}}</td>
-                                <td>{{$book->author->name}}</td>
-                                <td>{{$book->edition}}</td>
-                                <td><a href="{{Route('book.edit', $book->id)}}">Editar</a></td>
+                                <td>{{$aithor->name}}</td>
+                                <td>{{$author->nationality}}</td>
+                                <td>{{$book->biography}}</td>
+                                <td><a href="{{Route('author.edit', $author->id)}}">Editar</a></td>
                                 <td>
-                                    <form action="{{Route('book.destroy', $book->id)}}" method="POST" >
+                                    <form action="{{Route('author.destroy', $author->id)}}" method="POST" >
                                         @csrf
                                         @method('delete')
                                         <input type="submit" value="Eliminar">

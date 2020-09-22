@@ -15,6 +15,10 @@
                         <input type="text" name="name" class="form-control" value="{{$book->name}}"/>
                     </div>
                     <div class="form-group">
+                        <label>Autor</label>
+                        <input type="text" name="author" class="form-control" value="{{$book->author}}"/>
+                    </div>
+                    <div class="form-group">
                         <label>Edició</label>
                         <input type="text" name="edition" class="form-control" value="{{$book->edition}}"/>
                     </div>

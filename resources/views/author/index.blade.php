@@ -4,7 +4,10 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-                LLIBRES <a href="{{Route('author.create')}}" class="btn btn-secondary">Nou</a>
+                AUTORS
+                <div>
+                    <a href="{{Route('author.create')}}" class="btn btn-secondary" >Nou</a>
+                </div>
                 <div class="card-body">
                     <table class="table justify-content">
                         <thead>
@@ -17,9 +20,9 @@
                         <tbody>
                         @foreach($authors as $author)
                             <tr>
-                                <td>{{$aithor->name}}</td>
+                                <td>{{$author->name}}</td>
                                 <td>{{$author->nationality}}</td>
-                                <td>{{$book->biography}}</td>
+                                <td>{{$author->biography}}</td>
                                 <td><a href="{{Route('author.edit', $author->id)}}">Editar</a></td>
                                 <td>
                                     <form action="{{Route('author.destroy', $author->id)}}" method="POST" >

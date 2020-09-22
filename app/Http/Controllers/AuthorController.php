@@ -16,13 +16,15 @@ class AuthorController extends Controller
 
     public function create()
     {
-        //
+        return view('author.create');
     }
 
     public function store(Request $request)
     {
-        //
+        Author::create($request->all());
+        return redirect('/author');
     }
+
 
     public function show(Author $author)
     {

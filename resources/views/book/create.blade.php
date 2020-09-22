@@ -4,7 +4,7 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-                LLIBRES <a href="{{Route('book.create')}}" class="btn btn-secondary">Nou</a>
+                Editar Llibre
             </div>
             <div class="card-body">
                 <form action="{{Route('book.store')}}" method="POST">

@@ -11,14 +11,13 @@
                         <tr>
                             <th>Títol</th>
                             <th>Autor</th>
-                            <th>Edició</th>
+                            <th>Editorial</th>
                         </tr>
                         </thead>
                         <tbody>
                         @foreach($books as $book)
                             <tr>
                                 <td>{{$book->name}}</td>
-                                <td>{{$book->author->name}}</td>
                                 <td>{{$book->edition}}</td>
                                 <td><a href="{{Route('book.edit', $book->id)}}">Editar</a></td>
                                 <td>
